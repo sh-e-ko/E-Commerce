@@ -1,0 +1,20 @@
+.featured-swiper {
+    position: relative;
+}
+
+.featured-swiper .swiper-button-next,
+.featured-swiper .swiper-button-prev {
+    color: #962e2b;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    z-index: 99999;
+    font-size: 30px;
+    font-weight: bolder;
+  
+}
+
+.featured-swiper .swiper-button-next::after,
+.featured-swiper .swiper-button-prev::after {
+    font-size: 30px;
+}

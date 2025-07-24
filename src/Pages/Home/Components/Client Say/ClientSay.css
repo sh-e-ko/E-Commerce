@@ -1,0 +1,14 @@
+.client-swiper{
+    width: 60%;
+}
+.client-swiper .swiper-button-next,
+.client-swiper .swiper-button-prev {
+    color: #962e2b !important;
+
+
+}
+
+.client-swiper .swiper-button-next::after,
+.client-swiper .swiper-button-prev::after {
+    font-size: 30px;
+}

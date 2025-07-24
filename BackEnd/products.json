@@ -1,0 +1,76 @@
+{
+  "men": [
+    { "id": 1, "title": "Men's Suit 1", "price": 700, "category": "men", "inStock": "true" , "img" : "../src/assets/ImgMan/1.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.7 },
+    { "id": 2, "title": "Men's Suit 2", "price": 600, "category": "men", "inStock": "false" ,"img" : "../src/assets/ImgMan/2.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.2} ,
+    { "id": 3, "title": "Men's Suit 3", "price": 800, "category": "men", "inStock": "true" ,"img" : "../src/assets/ImgMan/3.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.3},
+    { "id": 4, "title": "Men's Suit 4", "price": 500, "category": "men", "inStock": "false" ,"img" : "../src/assets/ImgMan/4.jpg", "sizes": ["S", "M", "L", "XL"],"rating": 4.2 } ,
+    { "id": 5, "title": "Men's Suit 5", "price": 400, "category": "men", "inStock": "true" ,"img" : "../src/assets/ImgMan/5.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.6},
+    { "id": 6, "title": "Men's Suit 6", "price": 600, "category": "men", "inStock": "false" ,"img" : "../src/assets/ImgMan/6.png", "sizes": ["S", "M", "L", "XL"],"rating": 5 },
+    { "id": 7, "title": "Men's Suit 7", "price": 700, "category": "men", "inStock": "true" , "img" :"../src/assets/ImgMan/7.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.2 },
+    { "id": 8, "title": "Men's Suit 8", "price": 600, "category": "men", "inStock": "false" ,"img" : "../src/assets/ImgMan/8.jpg" , "sizes": ["S", "M", "L", "XL"],"rating": 4.1} ,
+    { "id": 9, "title": "Men's Suit 9", "price": 700, "category": "men", "inStock": "true" ,"img" : "../src/assets/ImgMan/9.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.4},
+    { "id": 10, "title": "Men's Suit 10", "price": 800, "category": "men", "inStock": "false" ,"img" : "../src/assets/ImgMan/10.jpg" , "sizes": ["S", "M", "L", "XL"],"rating": 3.8} ,
+    { "id": 11, "title": "Men's Suit 11", "price": 900, "category": "men", "inStock": "true" ,"img" : "../src/assets/ImgMan/11.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating":3.7},
+    { "id": 12, "title": "Men's Suit 12", "price": 1000, "category": "men", "inStock": "false" ,"img" : "../src/assets/ImgMan/12.jpg" , "sizes": ["S", "M", "L", "XL"],"rating": 4.6},
+    { "id": 13, "title": "Men's Suit 13", "price": 800, "category": "men", "inStock": "false" ,"img" :"../src/assets/ImgMan/13.jpg" , "sizes": ["S", "M", "L", "XL"],"rating": 4.7} ,
+    { "id": 14, "title": "Men's Suit 14", "price": 200, "category": "men", "inStock": "true" ,"img" : "../src/assets/ImgMan/14.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.9},
+    { "id": 15, "title": "Men's Suit 15", "price": 300, "category": "men", "inStock": "false" ,"img" : "../src/assets/ImgMan/15" , "sizes": ["S", "M", "L", "XL"],"rating": 4.8}
+  ],
+  "women": [
+    { "id": 16, "title": "Women's Dress 1", "price": 800, "category": "women", "inStock": "true" ,"img" : "../src/assets/ImgWoman/1.png" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.7 },
+    { "id": 17, "title": "Women's Dress 2", "price": 900, "category": "women", "inStock": "false" ,"img" : "../src/assets/ImgWoman/2.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.9 },
+    { "id": 18, "title": "Women's Dress 3", "price": 600, "category": "women", "inStock": "true" ,"img" : "../src/assets/ImgWoman/3.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.7 },
+    { "id": 19, "title": "Women's Dress 4", "price": 700, "category": "women", "inStock": "true","img" : "../src/assets/ImgWoman/4.jpg"  , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.6 },
+    { "id": 20, "title": "Women's Dress 5", "price": 500, "category": "women", "inStock": "false","img" : "../src/assets/ImgWoman/5.jpg"  , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.2 },
+    { "id": 21, "title": "Women's Dress 6", "price": 400, "category": "women", "inStock": "true","img" : "../src/assets/ImgWoman/6.jpg"  , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.1 },
+    { "id": 22, "title": "Women's Dress 7", "price": 300, "category": "women", "inStock": "false" ,"img" : "../src/assets/ImgWoman/7.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.2 },
+    { "id": 23, "title": "Women's Dress 8", "price": 200, "category": "women", "inStock": "true" ,"img" : "../src/assets/ImgWoman/8.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.3 },
+    { "id": 24, "title": "Women's Dress 9", "price": 800, "category": "women", "inStock": "true" ,"img" : "../src/assets/ImgWoman/9.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.4 },
+    { "id": 25, "title": "Women's Dress 10", "price": 400, "category": "women", "inStock": "true","img" : "../src/assets/ImgWoman/10.png" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.5 },
+    { "id": 26, "title": "Women's Dress 11", "price": 500, "category": "women", "inStock": "false","img" : "../src/assets/ImgWoman/11.png" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.6 },
+    { "id": 27, "title": "Women's Dress 12", "price": 600, "category": "women", "inStock": "true","img" : "../src/assets/ImgWoman/12.png" , "sizes": ["S", "M", "L", "XL"] ,"rating": 5 },
+    { "id": 28, "title": "Women's Dress 13", "price": 700, "category": "women", "inStock": "true" ,"img" : "../src/assets/ImgWoman/13.jpg", "sizes": ["S", "M", "L", "XL"] ,"rating": 4.9 },
+    { "id": 29, "title": "Women's Dress 14", "price": 800, "category": "women", "inStock": "false","img" : "../src/assets/ImgWoman/14.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.8 },
+    { "id": 30, "title": "Women's Dress 15", "price": 900, "category": "women", "inStock": "true","img" : "../src/assets/ImgWoman/15.jpg" , "sizes": ["S", "M", "L", "XL"] ,"rating": 4.7 }
+  ],
+  "kids": {
+    "boys": [
+      { "id": 31, "title": "Boys' Suit 1", "price": 500, "category": "boys", "inStock": "true","img" : "../src/assets/ImgBoy/1.png" ,  "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 32, "title": "Boys' Suit 2", "price": 500, "category": "boys", "inStock": "true" ,"img" : "../src/assets/ImgBoy/2.JPG", "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7 },
+      { "id": 33, "title": "Boys' Suit 3", "price": 500, "category": "boys", "inStock": "true" ,"img" : "../src/assets/ImgBoy/3.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7 },
+      { "id": 34, "title": "Boys' Suit 4", "price": 500, "category": "boys", "inStock": "false" ,"img" : "../src/assets/ImgBoy/4.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7 },
+      { "id": 35, "title": "Boys' Suit 5", "price": 500, "category": "boys", "inStock": "true" ,"img" : "../src/assets/ImgBoy/5.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 36, "title": "Boys' Suit 6", "price": 500, "category": "boys", "inStock": "true" ,"img" : "../src/assets/ImgBoy/6.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 37, "title": "Boys' Suit 7", "price": 500, "category": "boys", "inStock": "true","img" : "../src/assets/ImgBoy/7.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 38, "title": "Boys' Suit 8", "price": 500, "category": "boys", "inStock": "false" ,"img" : "../src/assets/ImgBoy/8.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 39, "title": "Boys' Suit 9", "price": 500, "category": "boys", "inStock": "true" ,"img" : "../src/assets/ImgBoy/9.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 40, "title": "Boys' Suit 10", "price": 500, "category": "boys", "inStock": "true" ,"img" : "../src/assets/ImgBoy/10.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 41, "title": "Boys' Suit 11", "price": 500, "category": "boys", "inStock": "false" ,"img" : "../src/assets/ImgBoy/11.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 42, "title": "Boys' Suit 12", "price": 500, "category": "boys", "inStock": "true" ,"img" :"../src/assets/ImgBoy/12.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 43, "title": "Boys' Suit 14", "price": 500, "category": "boys", "inStock": "false","img" : "../src/assets/ImgBoy/13.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 44, "title": "Boys' Suit 15", "price": 500, "category": "boys", "inStock": "true" ,"img" : "../src/assets/ImgBoy/14.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 45, "title": "Boys' Suit 16", "price": 500, "category": "boys", "inStock": "false" ,"img" : "../src/assets/ImgBoy/15.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7}
+  
+    ],
+    "girls": [
+      { "id": 46, "title": "Girls' Dress 1", "price": 450, "category": "girls", "inStock": "false" ,"img" : "../src/assets/ImgGirls/1.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7},
+      { "id": 47, "title": "Girls' Dress 2", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/2.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.6},
+      { "id": 48, "title": "Girls' Dress 3", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/3.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.9},
+      { "id": 49, "title": "Girls' Dress 4", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/4.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.8},
+      { "id": 50, "title": "Girls' Dress 5", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/5.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 3.9},
+      { "id": 51, "title": "Girls' Dress 6", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/6.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 3.8},
+      { "id": 52, "title": "Girls' Dress 7", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/7.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 3.7},
+      { "id": 53, "title": "Girls' Dress 8", "price": 450, "category": "girls", "inStock": "false" ,"img" : "../src/assets/ImgGirls/8.png" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 3.9},
+      { "id": 54, "title": "Girls' Dress 9", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/9.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.2},
+      { "id": 55, "title": "Girls' Dress 10", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/10.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.4},
+      { "id": 56, "title": "Girls' Dress 11", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/11.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.1},
+      { "id": 57, "title": "Girls' Dress 12", "price": 450, "category": "girls", "inStock": "false" ,"img" : "../src/assets/ImgGirls/12.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.2},
+      { "id": 58, "title": "Girls' Dress 13", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/13.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.3},
+      { "id": 59, "title": "Girls' Dress 14", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/14.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 5},
+      { "id": 60, "title": "Girls' Dress 15", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/15.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.9},
+      { "id": 61, "title": "Girls' Dress 16", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/16.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.8},
+      { "id": 62, "title": "Girls' Dress 17", "price": 450, "category": "girls", "inStock": "true" ,"img" : "../src/assets/ImgGirls/17.JPG" , "sizes": ["2Y", "4Y", "6Y", "8Y"],"rating": 4.7}
+   
+    ]
+  }
+}

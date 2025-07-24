@@ -1,0 +1,11 @@
+.Faq{
+    background-color: #d2e5f0;
+    width: 100%;
+    min-height: 100vh;
+}
+.faq{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    height: auto;
+}

@@ -1,0 +1,157 @@
+.Form {
+    width: 100%;
+    height: 100vh;
+    background-color: #962e2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+
+    width: 60%;
+    height: 60%;
+    background-color: #d2e5f0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.img {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+}
+
+.text {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text h2 {
+    font-size: 32px;
+    position: absolute;
+    top: 25px;
+    text-align: center;
+    color: #962e2b;
+
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input input {
+    width: 350px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #000000;
+    padding: 10px;
+}
+
+.input input::placeholder {
+    color: #000000;
+}
+
+
+.input span {
+    color: #962e2b;
+}
+
+.forgot {
+    width: 350px;
+    display: flex;
+    justify-content: end
+}
+
+.forgot a,
+.register a {
+    text-decoration: none;
+    color: #962e2b;
+}
+
+.btn {
+    width: 350px;
+    position: relative;
+    display: inline-block;
+    padding: 0.4em 0.5em;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #962e2b;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #962e2b;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #962e2b;
+}
+
+.btn:hover {
+    color: rgb(0, 0, 0);
+    box-shadow: inset 0 -100px 0 0 #962e2b;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+
+@media (max-width: 991px) {
+    .card {
+        flex-direction: column-reverse;
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .img {
+        position: static;
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .text {
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .text h2 {
+        position: static;
+    }
+
+    .input input,
+    .forgot,
+    .btn {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img {
+        width: 150px;
+    }
+
+    .text h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .input input {
+        font-size: 14px;
+    }
+}

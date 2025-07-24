@@ -1,0 +1,34 @@
+# Node Modules
+node_modules/
+BackEnd/node_modules/
+
+# Build Output
+dist/
+build/
+dist-ssr/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS / Editor Stuff
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Assets (اختياري لو الملفات كبيرة)
+**/assets/
+**/*.jpg
+**/*.png
+**/*.jpeg
+**/*.mp4
+**/*.webp

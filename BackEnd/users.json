@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Sherif",
+    "email": "sherif@example.com",
+    "password": "12345678"
+  },
+  {
+    "id": 2,
+    "name": "Ali",
+    "email": "ali@example.com",
+    "password": "987654321"
+  },
+  {
+    "id": 1753023206236,
+    "name": "sherif",
+    "email": "sherifKhaled55@gmail.com",
+    "password": "123456789"
+  },
+  {
+    "id": 1753023258766,
+    "name": "Ahmed ",
+    "email": "Ahmed@gmail.gom",
+    "password": "123456789"
+  },
+  {
+    "id": 1753070551832,
+    "name": "sherif",
+    "email": "khsherif61@gmail.com",
+    "password": "123456789"
+  }
+]

@@ -1,0 +1,12 @@
+.wallet{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.walletcard{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
