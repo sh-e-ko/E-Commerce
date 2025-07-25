@@ -7,7 +7,7 @@ import style from './Cart.module.css';
 
 export default function Cart()
 {
-  const { cartItems, removeFromCart } = useCart();
+  const { cartItems, removeFromCart, clearCart, increaseQuantity, decreaseQuantity } = useCart();
 
   const total = cartItems.reduce((acc, item) =>
   {
@@ -24,7 +24,7 @@ export default function Cart()
         <p>Cart is empty</p>
       ) : (
         <>
-          <div className={style.container} >
+          <div className={style.container}>
             {cartItems.map((item, i) => (
               <div className={style.cartcard} key={i}>
                 <img src={item.img} alt={item.title} width={100} />
@@ -38,7 +38,12 @@ export default function Cart()
 
                 {item.rating && <Stars rating={item.rating} />}
 
-                <p>Quantity: {item.quantity}</p>
+                <div>
+                  <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                  <span style={{ margin: '0 10px' }}>{item.quantity}</span>
+                  <button onClick={() => increaseQuantity(item.id)}>+</button>
+                </div>
+
                 <button onClick={() => removeFromCart(item.id)}>Remove</button>
                 <p><span>Total:</span> {item.quantity * item.price} $</p>
               </div>
@@ -48,6 +53,8 @@ export default function Cart()
           <div>
             <h3>Total: ${total.toFixed(2)}</h3>
             <Link to='/payment'>Checkout</Link>
+            <br />
+            <button onClick={clearCart}>Clear Cart</button>
           </div>
         </>
       )}

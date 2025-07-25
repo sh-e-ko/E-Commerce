@@ -7,7 +7,6 @@ import 'swiper/css/navigation';
 import './Featured.css';
 import style from './Featured.module.css';
 import WishlistBtn from '../../../../Wishlist/WishlistBtn';
-import { RiShoppingCart2Fill } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import BtnCart from '../../../../Cart/ContextCart/BtnCart';
 
@@ -33,11 +32,24 @@ export default function FeaturedProducts({ endpoint = "/products", apiInstance, 
         <section className={style.featuredSection}>
             <h4 className={style.text}>Featured Products</h4>
             <Swiper
+                spaceBetween={30}
                 slidesPerView={4}
-                spaceBetween={20}
                 navigation={true}
-                modules={[Navigation]}
                 className="featured-swiper"
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                    },
+                }}
             >
                 {Products.map(product => (
                     <SwiperSlide key={product.id}>

@@ -4,14 +4,13 @@
 
 .featured-swiper .swiper-button-next,
 .featured-swiper .swiper-button-prev {
-    color: #962e2b;
-    position: absolute;
-    top: 0;
-    margin: 0;
-    z-index: 99999;
-    font-size: 30px;
-    font-weight: bolder;
-  
+    color: #962e2b !important;
+    position: absolute !important;
+    top: 0 !important;
+    margin: 0 !important;
+    z-index: 99999 !important;
+    font-size: 30px !important;
+    font-weight: bolder !important;
 }
 
 .featured-swiper .swiper-button-next::after,
