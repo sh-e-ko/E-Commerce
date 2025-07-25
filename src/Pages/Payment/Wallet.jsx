@@ -14,27 +14,27 @@ import style from './Payment.module.css'
 
 export default function Wallet()
 {
-    // const imgref = useRef(null)
-    // const handleOnchangeImg = (e) =>
-    // {
-    //     const imgReader = new FileReader
-    //     imgReader.readAsDataURL(e.target.files[0])
-    //     imgReader.onload((e) =>
-    //     {
-    //         imgref.current.src = e.target.result
-    //     })
-    //     paymentMethod.setFieldValue("file", e.currentTarget.files[0])
-    // }
+    const imgref = useRef(null)
+    const handleOnchangeImg = (e) =>
+    {
+        const imgReader = new FileReader
+        imgReader.readAsDataURL(e.target.files[0])
+        imgReader.onload = (e) =>
+{
+            imgref.current.src = e.target.result
+        }
+        paymentMethod.setFieldValue("file", e.currentTarget.files[0])
+    }
 
     const navigate = useNavigate()
     const [activeModal, setActiveModal] = useState(null)
 
     const cards = [
         { id: 1, img: img1, phone: '01012345678' },
-        { id: 2, img: img2, phone: '01198765432' },
         { id: 3, img: img3, phone: '01211112222' },
         { id: 4, img: img4, phone: '01533334444' },
         { id: 5, img: img5, phone: '01055556666' },
+        { id: 2, img: img2, phone: '01198765432' },
     ]
 
     const handleShow = (index) =>
@@ -75,6 +75,7 @@ export default function Wallet()
     })
 
     return (
+       
         <section className={style.wallet}>
             {cards.map((card, index) => (
                 <div key={card.id} className={style.walletcard}>
@@ -95,7 +96,7 @@ export default function Wallet()
                         <form onSubmit={paymentMethod.handleSubmit}>
                             <div>
                                 <input
-                                    type='number'
+                                    type='text'
                                     placeholder="Your number"
                                     {...paymentMethod.getFieldProps("number")}
                                 />
@@ -111,14 +112,14 @@ export default function Wallet()
                                     accept="image/*"
 
                                     onBlur={paymentMethod.handleBlur}
-                                    // onChange={handleOnchangeImg}
+                                    onChange={handleOnchangeImg}
                                 />
 
                                 {paymentMethod.touched.file && paymentMethod.errors.file && (
                                     <span>{paymentMethod.errors.file}</span>
                                 )}
 
-                                {/* <img width='250px' height='250px' ref={imgref} /> */}
+                                <img width='350px' height='350px' ref={imgref} />
                             </div>
 
                             <Modal.Footer>

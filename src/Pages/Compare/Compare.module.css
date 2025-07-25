@@ -1,33 +1,142 @@
 .container {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: space-around;
-    position: relative;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .card {
-    margin-top: 20px;
     width: 350px;
-    height: 450px;
-    position: relative;
+    height: 550px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.43);
     transition: transform 0.3s ease;
-    background-color: #ffffff;
-    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
     line-height: 28px;
+    position: relative;
+    border: 1px solid #eee;
+    outline: 1px solid transparent;
+    outline-offset: -5px;
+    transition: outline 0.3s ease;
+}
+
+
+
+.cardicons {
+    margin-top: 5px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardimg img {
+    width: 250px;
+    height: 250px;
+}
+
+.cardimg {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .text {
     text-align: center;
-    font-size: 52px;
+    font-size: 32px;
     color: #962e2b;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
-.WishlistBtn{
-    position: absolute;
-    top: 0;
-    right: 5px;
+.cardtext {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.cardtext span {
+    color: #962e2b;
+    font-size: 20px;
+}
+
+.Compareicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #962e2b;
+    min-width: 80px;
+    margin: auto;
+    padding: 20px;
+}
+
+.input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.3s, box-shadow 0.3s;
+    
+}
+
+
+.input:focus {
+    border-color: #962e2b;
+    box-shadow: 0 0 8px rgba(150, 46, 43, 0.2);
+    outline: none;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    outline: 1px solid #962e2b;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .cardimg img {
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+    }
+
+    .text {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+
+    .Compareicon {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    .input {
+        width: 90%;
+    }
 }

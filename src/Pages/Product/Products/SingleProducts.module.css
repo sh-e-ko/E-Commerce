@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.card {
+    width: 350px;
+    height: 550px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.43);
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+
+}
+
+.img img {
+    width: 250px;
+    height: 250px;
+
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.icon {
+    margin-top: 5px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.text{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.text span{
+    color: #962e2b;
+    font-size: 20px;
+}

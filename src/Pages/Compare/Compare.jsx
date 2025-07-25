@@ -1,92 +1,94 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { products } from '../../Api/Products'
-import WishlistBtn from '../Wishlist/WishlistBtn'
-import style from './Compare.module.css'
+import React, { useEffect, useState } from 'react';
+import { products } from '../../Api/Products';
+import Stars from '../../Components/layouts/star/Stars';
+import BtnCart from '../Cart/ContextCart/BtnCart';
+import WishlistBtn from '../Wishlist/WishlistBtn';
+import style from './Compare.module.css';
+import { TbArrowsExchange } from 'react-icons/tb';
+import MainLayouts from '../../Components/layouts/MainLayouts/MainLayouts';
+
 export default function Compare()
 {
-    const [searchTerm1, setSearchTerm1] = useState('')
-    const [searchTerm2, setSearchTerm2] = useState('')
-    const [product1, setProduct1] = useState(null)
-    const [product2, setProduct2] = useState(null)
-    const [loading1, setLoading1] = useState(false)
-    const [loading2, setLoading2] = useState(false)
-    const [error1, setError1] = useState('')
-    const [error2, setError2] = useState('')
+    const [searchTerm1, setSearchTerm1] = useState('');
+    const [searchTerm2, setSearchTerm2] = useState('');
+    const [product1, setProduct1] = useState(null);
+    const [product2, setProduct2] = useState(null);
+    const [loading1, setLoading1] = useState(false);
+    const [loading2, setLoading2] = useState(false);
+    const [error1, setError1] = useState('');
+    const [error2, setError2] = useState('');
 
-    const fetchProduct1 = async () =>
+    const fetchProduct = async (term, setProduct, setError, setLoading) =>
     {
-        if (!searchTerm1) return;
-        setLoading1(true);
-        setError1('');
+        if (!term) return;
+        setLoading(true);
+        setError('');
         try
         {
             const response = await products.get("/products");
-            console.log(response.data);
-            const allProducts = response.data;
-
-            const found = allProducts.find(p =>
-                p.title.toLowerCase().includes(searchTerm1.toLowerCase())
+            const found = response.data.find(p =>
+                p.title.toLowerCase().includes(term.toLowerCase())
             );
-
             if (found)
             {
-                setProduct1(found);
+                setProduct(found);
             } else
             {
-                setProduct1(null);
-                setError1("Product not found");
+                setProduct(null);
+                setError("Product not found");
             }
         } catch (err)
         {
-            setError1('Error fetching product');
+            setError('Error fetching product');
         } finally
         {
-            setLoading1(false);
+            setLoading(false);
         }
-
     };
 
-    const fetchProduct2 = async () =>
+    useEffect(() =>
     {
-        if (!searchTerm2) return;
-        setLoading2(true);
-        setError2('');
-        try
-        {
-            const response = await products.get("/products");
-            const allProducts = response.data;
+        fetchProduct(searchTerm1, setProduct1, setError1, setLoading1);
+    }, [searchTerm1]);
 
-            const found = allProducts.find(p =>
-                p.title.toLowerCase().includes(searchTerm2.toLowerCase())
-            );
+    useEffect(() =>
+    {
+        fetchProduct(searchTerm2, setProduct2, setError2, setLoading2);
+    }, [searchTerm2]);
 
-            if (found)
-            {
-                setProduct2(found);
-            } else
-            {
-                setProduct2(null);
-                setError2("Product not found");
-            }
-        } catch (err)
-        {
-            setError2('Error fetching product');
-        } finally
-        {
-            setLoading2(false);
-        }
+    const ProductCard = ({ product, loading, error }) =>
+    {
+        if (loading) return <div>Loading...</div>;
+        if (error) return <div style={{ color: 'red' }}>{error}</div>;
+        if (!product) return null;
+
+        return (
+            <div className={style.card}>
+                <div className={style.cardicons}>
+                    <BtnCart product={product} />
+                    <WishlistBtn className={style.WishlistBtn} product={product} />
+                </div>
+                <div className={style.cardimg}>
+                    <img src={product.img} loading="lazy" alt={product.title} width="250px" height='250px' />
+                </div>
+                <div className={style.cardtext}>
+                    <p>{product.title}</p>
+                    <p><span>price : </span> {product.price} $</p>
+                    {product.sizes && (
+                        <p><span>Sizes :</span> {product.sizes.join(', ')}</p>
+                    )}
+                    <p className={style.inStock}><span>inStock :</span> {product.inStock}</p>
+                    {product.rating && <Stars rating={product.rating} />}
+                </div>
+            </div>
+        );
     };
-
-    useEffect(() => { fetchProduct1(); }, [searchTerm1]);
-    useEffect(() => { fetchProduct2(); }, [searchTerm2]);
 
     return (
+        <MainLayouts>
         <section>
-            <div className={style.container} >
-
-
-                <div >
+            <div className={style.container}>
+                <div className={style.div}>
                     <h3 className={style.text}>First Product</h3>
                     <input
                         type="text"
@@ -95,23 +97,14 @@ export default function Compare()
                         onChange={(e) => setSearchTerm1(e.target.value)}
                         className={style.input}
                     />
-
-                    {loading1 && <div>Loading...</div>}
-                    {error1 && <div style={{ color: 'red' }}>{error1}</div>}
-
-                    {product1 && !loading1 && (
-                        <div className={style.card}>
-                            <img src={product1.img} loading="lazy" alt={product1.title} width="250px" height='250px' />
-                            <p>{product1.price} EGP</p>
-                            <p>{product1.title}</p>
-                            <p>{product1.rating}</p>
-                            <p>{product1.sizes}</p>
-                            <WishlistBtn className={style.WishlistBtn} product={product2} />
-                        </div>
-                    )}
+                    <ProductCard product={product1} loading={loading1} error={error1} />
                 </div>
 
-                <div>
+                <div className={style.Compareicon}>
+                    <TbArrowsExchange />
+                </div>
+
+                <div className={style.div}>
                     <h3 className={style.text}>Second Product</h3>
                     <input
                         type="text"
@@ -120,23 +113,11 @@ export default function Compare()
                         onChange={(e) => setSearchTerm2(e.target.value)}
                         className={style.input}
                     />
-                    {loading2 && <div>Loading...</div>}
-                    {error2 && <div style={{ color: 'red' }}>{error2}</div>}
-
-                    {product2 && !loading2 && (
-                        <div className={style.card}>
-                            <img src={product2.img} loading="lazy" alt={product1.title} width="250px" height='250px' />
-                            <p>{product2.price} EGP</p>
-                            <p>{product2.title}</p>
-                            <p>{product2.rating}</p>
-                            <p>{product2.sizes}</p>
-                            <WishlistBtn className={style.WishlistBtn} product={product2} />
-                         
-                        </div>
-                    )}
+                    <ProductCard product={product2} loading={loading2} error={error2} />
                 </div>
             </div>
         </section>
+        </MainLayouts>
     );
 }
 
